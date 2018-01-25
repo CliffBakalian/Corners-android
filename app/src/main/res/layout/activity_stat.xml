@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bakalian.clifford.corners.StatActivity">
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/close"
+        android:onClick="ReturnHome" />
+
+    <TextView
+        android:id="@+id/stat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="STATISTICS"
+        android:textColor="@android:color/black"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/game_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stat_title"
+        android:layout_marginTop="71dp"
+        android:layout_toStartOf="@+id/stat_overview"
+        android:text="TOTAL GAMES: "
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/win_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/game_total"
+        android:layout_below="@+id/game_total"
+        android:layout_marginTop="20dp"
+        android:text="TOTAL WINS:"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/puzzles_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/win_total"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="PUZZLES"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/stat_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/win_total"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="31dp"
+        android:text="OVERVIEW"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/total_puzzles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/puzzles_stat"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@+id/puzzles_stat"
+        android:text="TOTAL PUZZLES:"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/easy_puzzles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/total_puzzles"
+        android:layout_below="@+id/total_puzzles"
+        android:layout_marginTop="24dp"
+        android:text="EASY:"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/normal_puzzles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/easy_puzzles"
+        android:layout_below="@+id/easy_puzzles"
+        android:layout_marginTop="28dp"
+        android:text="NORMAL:"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/hard_puzzles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/normal_puzzles"
+        android:layout_below="@+id/normal_puzzles"
+        android:layout_marginTop="28dp"
+        android:text="HARD:"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="resetScores"
+        android:text="reset" />
+
+    <TextView
+        android:id="@+id/totalGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/win_total"
+        android:layout_alignStart="@+id/totalWins"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/totalWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/puzzles_stat"
+        android:layout_alignEnd="@+id/stat_overview"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/totalPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/totalWins"
+        android:layout_alignBottom="@+id/totalWins"
+        android:layout_toEndOf="@+id/stat_title"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/totalPuzzles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/stat_overview"
+        android:layout_alignTop="@+id/total_puzzles"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/totalEasy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/totalPuzzles"
+        android:layout_alignTop="@+id/easy_puzzles"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/totalMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hard_puzzles"
+        android:layout_alignEnd="@+id/stat_overview"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/totalHard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hard_puzzles"
+        android:layout_alignEnd="@+id/stat_overview"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/easyPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/totalPercent"
+        android:layout_alignTop="@+id/totalEasy"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/mediumPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/easyPercent"
+        android:layout_alignTop="@+id/totalMedium"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/hardPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mediumPercent"
+        android:layout_alignTop="@+id/totalHard"
+        android:text="125"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

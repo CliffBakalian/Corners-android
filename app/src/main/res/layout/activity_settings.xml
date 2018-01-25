@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.bakalian.clifford.corners.SettingsActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/close"
+        android:onClick="ReturnHome" />
+
+    <ImageView
+        android:id="@+id/settingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        app:srcCompat="@drawable/setting_s" />
+
+    <ImageView
+        android:id="@+id/sizeFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sizeSeven"
+        android:layout_toStartOf="@+id/size_title"
+        android:onClick="setFive"
+        app:srcCompat="@drawable/setting_5" />
+
+    <ImageView
+        android:id="@+id/sizeSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/size_title"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@+id/size_title"
+        android:onClick="setSeven"
+        app:srcCompat="@drawable/setting_7" />
+
+    <TextView
+        android:id="@+id/size_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colorOne"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="185dp"
+        android:text="SIZE"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        tools:text="@string/settings_size_title" />
+
+    <TextView
+        android:id="@+id/theme_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settingTitle"
+        android:layout_marginTop="30dp"
+        android:layout_toEndOf="@+id/back"
+        android:text="Theme:" />
+
+    <ImageView
+        android:id="@+id/colorOne"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/sizeFive"
+        android:layout_alignTop="@+id/theme_text"
+        android:onClick="setThemeOne"
+        app:srcCompat="@color/colorPrimary" />
+
+    <ImageView
+        android:id="@+id/colorTwo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/colorOne"
+        android:layout_centerHorizontal="true"
+        android:onClick="setThemeTwo"
+        app:srcCompat="@android:color/holo_orange_light" />
+
+    <ImageView
+        android:id="@+id/colorThree"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/sizeSeven"
+        android:layout_alignTop="@+id/colorTwo"
+        android:onClick="setThemeThree"
+        app:srcCompat="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/colorFour"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignStart="@+id/colorOne"
+        android:layout_below="@+id/colorOne"
+        android:layout_marginTop="15dp"
+        android:onClick="setThemeFour"
+        app:srcCompat="@android:color/holo_green_light" />
+
+    <ImageView
+        android:id="@+id/colorFive"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/colorFour"
+        android:layout_alignEnd="@+id/colorTwo"
+        android:onClick="setThemeFive"
+        app:srcCompat="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/colorSix"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignEnd="@+id/colorThree"
+        android:layout_alignTop="@+id/colorFive"
+        android:onClick="setThemeSix"
+        app:srcCompat="@android:color/holo_blue_bright" />
+
+    <ImageView
+        android:id="@+id/flip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/theme_text"
+        android:layout_below="@+id/colorOne"
+        android:onClick="swap"
+        app:srcCompat="@android:drawable/ic_menu_rotate" />
+
+</RelativeLayout>
