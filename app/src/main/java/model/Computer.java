@@ -32,7 +32,7 @@ public class Computer {
         movesLeft = 4;
         pieces = new int[]{1,1,1,1};
     }
-    //and back we go
+    //i think i got it to work
     private int getMoves(Board b, Piece p) {
         int count = 0;
         int xPos = p.getXPos();
