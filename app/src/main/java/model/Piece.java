@@ -18,13 +18,13 @@ public class Piece {
     private Context context;
     private boolean isBlank;
     private int size;
-    public Piece(Context context, int x, int y, int s){
+    public Piece(Context context, int x, int y, int size){
         xPos = x;
         yPos = y;
-        size = s;
         this.context = context;
+        this.size = size;
         orientation = 0;
-        if (size == 7)
+        if(size ==7)
             sprite = BitmapFactory.decodeResource(context.getResources(), R.drawable.sevenpiece);
         else
             sprite = BitmapFactory.decodeResource(context.getResources(), R.drawable.fivepiece);
@@ -36,7 +36,7 @@ public class Piece {
         canvas.drawBitmap(sprite, row, col, null);
     }
     public Piece(Piece p){
-        this(p.context, p.getXPos(),p.getYPos(), p.size);
+        this(p.context, p.getXPos(),p.getYPos(),p.size);
         this.sprite = p.sprite;
         this.orientation = p.orientation;
     }

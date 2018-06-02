@@ -26,7 +26,7 @@ public class Board {
         else
             sprite = BitmapFactory.decodeResource(gm.context.getResources(), R.drawable.five);
         board = new Piece[SIZE][SIZE];
-        Piece temp = new Piece(gm.context, 0, 0, SIZE);
+        Piece temp = new Piece(gm.context, 0, 0, size);
         pieceSize = temp.getWidth();
         border = (sprite.getWidth() - (temp.getHeight() * size)) / 2;
         for (int i = 0; i < SIZE; i++)
@@ -36,9 +36,7 @@ public class Board {
         yPos = (sprite.getHeight()/5);
     }
 
-    public boolean isOccupied(int x, int y){
-        return board[x][y] != null;
-    }
+    public boolean isOccupied(int x, int y){return board[x][y] != null;}
 
     private void addPiece(Piece piece){
         board[piece.getXPos()][piece.getYPos()] = piece;
@@ -64,14 +62,14 @@ public class Board {
             y += piece.getYOrientation();
         }
 
-        int moves[] = player.getMoves();
-        if (x == 0 && y == 0 && moves[3] == 0)
+        Piece moves[] = player.getMoves();
+        if (x == 0 && y == 0 && moves[3] == null)
             count -= 1;
-        else if (x == 0 && y == SIZE && moves[2] == 0)
+        else if (x == 0 && y == SIZE && moves[2] == null)
             count -= 1;
-        else if (x == SIZE && y == 0 && moves[0] == 0)
+        else if (x == SIZE && y == 0 && moves[0] == null)
             count -= 1;
-        else if (x == SIZE && y == SIZE && moves[1] == 0)
+        else if (x == SIZE && y == SIZE && moves[1] == null)
             count -= 1;
         return count != 0;
     }
@@ -94,6 +92,7 @@ public class Board {
 
     public void playerMove(Piece piece){ addPiece(piece); }
 
+    public int getSize(){return SIZE;}
     public double getPieceSize(){return pieceSize;}
     public int getBorder() { return border;}
 }

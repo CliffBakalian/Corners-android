@@ -48,6 +48,7 @@ public class Game {
         PHONEHEIGHT = y;
         SIZE = size;
         HUD = new Hud[6];
+        gameBoard = new Board(gv, x, SIZE);
         for (int i = 0; i< 6; i++){
             HUD[i] = new Hud(gv.context, i);
         }
@@ -55,26 +56,31 @@ public class Game {
             computer = null;
         }
         else
-            computer = new Computer(gv.context, 0);
-        gameBoard = new Board(gv, x, SIZE);
+            computer = new Computer(gv.context, gameBoard);
         pieceSize = (int) gameBoard.getPieceSize();
         players = new Player[numPlayers];
-        players[0] = new Player("Player 1");
+        players[0] = new Player("Player 1", gv.context, gameBoard);
         if (numPlayers == 2)
-            players[1] = new Player("Player 2");
-        temp = new Piece(gv.context, 0,0, SIZE);
+            players[1] = new Player("Player 2", gv.context,gameBoard);
+        else
+            players[1] = new Computer(gv.context,gameBoard);
+        temp = new Piece(gv.context, 0,0, size);
         temp.setBlank();
         last = null;
         sideWidth = (int)(PHONEWIDTH * .03);
         illegalWidth = 0;
         topHeight = PHONEHEIGHT;
         int rightSideX = PHONEWIDTH - sideWidth;
+
+        // the fancy animations
         rightTop= new Rect(rightSideX,0,PHONEWIDTH, topHeight);
         leftTop = new Rect(0,0,sideWidth, topHeight);
         rightBottom= new Rect(rightSideX,0,PHONEWIDTH, 2 *PHONEHEIGHT);
         leftBottom = new Rect(0,0,sideWidth, 2*PHONEHEIGHT);
         illegalRight= new Rect(PHONEWIDTH,0,PHONEWIDTH, 2*PHONEHEIGHT);
         illigalLeft = new Rect(0,0,0, 2*PHONEHEIGHT);
+
+        //the settings for the theme
         SharedPreferences shareprefs = gv.context.getSharedPreferences("THEME", MODE_PRIVATE);
         oneColor = shareprefs.getString("ONE_COLOR","#00f2ff");
         twoColor = shareprefs.getString("TWO_COLOR","#ff9000");
@@ -255,9 +261,9 @@ public class Game {
 
     private boolean hubCollied(int x, int y, Piece p){
         int playerIndex = (player1 || players.length == 1)? 0: 1;
-        int pieces[] = players[playerIndex].getMoves();
+        Piece pieces[] = players[playerIndex].getPieces();
         for (int i = 0; i< 4; i++){
-            if (pieces[i] == 1) {
+            if (pieces[i] != null) {
                 if (HUD[i].hasCollided(x,y)) {
                     p.changeSprite();
                     //Log.d("TOUCH:", "ROTATED: " + (i * 90));
@@ -445,7 +451,7 @@ public class Game {
         //HUD[4].onDraw(canvas, 30, 30);
         int x = gameBoard.getBoardPosX();
         int playerIndex = (player1 || players.length == 1)? 0: 1;
-        int pieces[] = players[playerIndex].getMoves();;
+        Piece pieces[] = players[playerIndex].getPieces();;
         int movesLeft = players[playerIndex].movesLeft();;
         int pSize = HUD[0].getSize();
         //int bias = sizeX - (pSize * movesLeft);//((SIZE-movesLeft) * pSize)/(movesLeft + 1);
@@ -454,7 +460,7 @@ public class Game {
         x += bias;
         int count = 0;
         for (int i = 0; i< 4; i++){
-            if (pieces[i] == 1) {
+            if (pieces[i] != null) {
                 HUD[i].onDraw(canvas, x + (count * (pSize + bias)), y);
                 count++;
             }

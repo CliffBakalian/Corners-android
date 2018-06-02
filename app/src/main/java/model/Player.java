@@ -1,24 +1,30 @@
 package model;
 
+import android.content.Context;
+
 /**
  * Created by clifford on 12/13/17.
  */
 
 public class Player {
-    private String name;
-    private int moves[];
-    private int movesLeft;
-
-    public Player(String name){
+    protected String name;
+    protected Board board;
+    protected Piece pieces[];
+    protected int movesLeft;
+    protected Context context;
+    public Player(String name, Context context, Board b){
+        board = b;
         this.name = name;
+        this.context = context;
         movesLeft = 4;
-        moves = new int[]{1,1,1,1};
+        pieces = new Piece[]{new Piece(context, 0,0, b.getSize()),new Piece(context, 0,0,b.getSize()),
+                            new Piece(context, 0,0,b.getSize()),new Piece(context, 0,0,b.getSize())};
     }
 
     public boolean placePiece(int piece){
-        if (moves[piece] == 0)
+        if (pieces[piece] == null)
             return false;
-        moves[piece] = 0;
+        pieces[piece] = null;
         movesLeft--;
         if (movesLeft == 0){
             resetMoves();
@@ -28,11 +34,11 @@ public class Player {
 
     public void resetMoves(){
         for (int i =0; i < 4; i++)
-            moves[i] = 1;
+            pieces[i] = new Piece(context,0,0, board.getSize());
         movesLeft = 4;
     }
 
-    public int[] getMoves(){ return moves; }
+    public Piece[] getPieces(){ return pieces; }
 
     public int movesLeft(){ return movesLeft;}
     public String getName(){ return name; }
