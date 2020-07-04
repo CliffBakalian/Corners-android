@@ -1,28 +1,14 @@
 <resources>
     <string name="app_name">Corners</string>
-    <string name="single_button">Singleplayer</string>
-    <string name="multibutton">Multiplayer</string>
-    <string name="puzzle_button">Puzzles</string>
-    <string name="setting_button">"Settings"</string>
-
-    <string name="title_activity_game_view">GameView</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-
-    <string name="title_activity_settings">SettingsActivity</string>
-    <string name="settings_Difficulty">Difficulty:</string>
-    <string name="settings_size_title">SIZE</string>
-    <string name="title_activity_about">AboutActivity</string>
-    <string name="title_about">Credits</string>
-    <string name="about_clifford">CLIFFORD BAKALIAN</string>
-    <string name="about_justin">JUSTIN GOODMAN</string>
-    <string name="about_application">APPLICATION LEADER</string>
-    <string name="about_web">WEB LEADER</string>
-
-    <string name="statTotal">statTotal</string>
-    <string name="gameTotal">gameTotal</string>
-    <string name="puzzleTotal">puzzleTotal</string>
-    <string name="puzzleEasy">puzzlesEasy</string>
-    <string name="puzzleMedium">puzzlesMedium</string>
-    <string name="puzzleHard">puzzlesHard</string>
+    <string name="game_title">CORNERS</string>
+    <string name="play_button">PLAY</string>
+    <string name="settings_button">SETTINGS</string>
+    <string name="about_page_title">ABOUT</string>
+    <string name="submit_button">SUBMIT</string>
+    <string name="invalid_move">Invalid Move</string>
+    <string name="player_one_turn">Player One\'s Turn</string>
+    <string name="player_two_turn">Player Two\'s Turn</string>
+    <string name="player_one_name">Player 1</string>
+    <string name="player_two_name">Player 2</string>
+    <string name="opponent_pieces">Opponent\'s Pieces</string>
 </resources>
