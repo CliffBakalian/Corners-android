@@ -22,7 +22,7 @@ play with a 5x5 board.
 #### Pieces
 
 Each player has 4 pieces,  
-![pieces] (./img/pieces.png)  
+![[pieces]](./img/pieces.png)  
 Each piece has a certain orientation which it must be played. 
 The orientation of the last played piece dictates where the next piece can be played. 
 Once a player places a piece down, they cannot place that piece down again until all 
@@ -37,15 +37,15 @@ The next player then can place thier piece down in the same row or same column
 as the previous piece in the direction at which a piece 'points.'
 
 For example:  
-![piece] (./img/piece.png)  
+![[piece]](./img/piece.png)  
 This piece 'points' down and to the right. So the next piece which can be placed
 must be placed on the sam row to the right or the same column below this piece.  
 
-![example] (./img/board.png)   
+![[example]](./img/board.png)   
 
 Do to how past piece influece the next piece, there are 4 illegal moves:  
 
-![illegal] (./img/illegal.png)  
+![[illegal]](./img/illegal.png)  
 
 ### Ending the Game
 
