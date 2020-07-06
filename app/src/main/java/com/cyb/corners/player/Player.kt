@@ -1,6 +1,6 @@
 package com.cyb.corners.player
 
-class Player (private var name:String){
+class Player (var name:String){
     var pieces = BooleanArray(4){_->true}
 
     public fun reset(){

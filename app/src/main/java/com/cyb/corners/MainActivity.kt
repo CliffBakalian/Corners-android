@@ -1,18 +1,20 @@
 package com.cyb.corners
 
 import android.content.Intent
-import android.content.SharedPreferences
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val USER_PREFS = "com.cyb.prefs"
     private fun initButtons(){
-        play_button.setOnClickListener {
+        single_button.setOnClickListener {
+            val intent = Intent(this, GameActivity::class.java)
+            val b = Bundle()
+            b.putBoolean("AI",true)
+            intent.putExtras(b)
+            startActivity(intent)
+        }
+        multi_button.setOnClickListener {
             val intent = Intent(this, GameActivity::class.java)
             startActivity(intent)
         }
@@ -29,11 +31,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val prefs = this.getSharedPreferences(USER_PREFS, 0)
-        val editor:SharedPreferences.Editor = prefs.edit()
-        editor.putInt("P1_COLOR", Color.BLUE)
-        editor.putInt("P2_COLOR", Color.RED)
-        editor.commit()
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
         initButtons()

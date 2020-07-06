@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Corners</string>
     <string name="game_title">CORNERS</string>
-    <string name="play_button">PLAY</string>
+    <string name="multi_button">MultiPlayer</string>
+    <string name="single_button">Single Player</string>
     <string name="settings_button">SETTINGS</string>
     <string name="about_page_title">ABOUT</string>
     <string name="submit_button">SUBMIT</string>
@@ -10,5 +11,22 @@
     <string name="player_two_turn">Player Two\'s Turn</string>
     <string name="player_one_name">Player 1</string>
     <string name="player_two_name">Player 2</string>
+    <string name="player_one_color">Player 1\'s Color</string>
+    <string name="player_two_color">Player 2\'s Color</string>
     <string name="opponent_pieces">Opponent\'s Pieces</string>
+    <string name="replay_button">REPLAY</string>
+    <string name="end_button">END</string>
+    <string name="reset_button">reset</string>
+    <string name="tg_label">Total Games</string>
+    <string name="tw_label">Total Wins</string>
+    <string name="stat_value">Win Ratio</string>
+    <string name="close_button">Close</string>
+    <string name="Intro">Players take turns placing pieces on the game board. The first piece must be
+    placed in the center square. A piece looks like:</string>
+    <string name="placingPieces">Each piece corners off the row and column as to where the next piece
+    can be placed.\n
+    The above piece would mean the next piece can only be placed to the right on the same row, or below
+    on the same column.\n\n
+    There are only 4 illegal moves:</string>
+    <string name="End">If you cannot place a piece, or you cannot play a valid move, you lose</string>
 </resources>

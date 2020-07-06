@@ -32,22 +32,13 @@ class Board (val size:Int){
         board[row*size+col] = value
         boolBoard[row*size+col] = false
     }
-
-//    public fun setRow(row:Int, values:IntArray){
-//        for((index, value) in values.withIndex()){
-//            board[row*size+index] = value
-//            boolBoard[row*size+index] = false
-//        }
-//    }
-
-//    public fun setCol(col:Int, values:IntArray){
-//        for((index, value) in values.withIndex()){
-//            board[index*size+col] = value
-//            boolBoard[index*size+col] = false
-//        }
-//    }
-
-
-
-
+    fun getCopy():Board{
+        val boardcpy = Board(size)
+        for((i,v) in boolBoard.withIndex())
+            boardcpy.boolBoard[i] = v
+        for((i,v) in board.withIndex())
+            boardcpy.board[i] = v
+        boardcpy.lastPiece = lastPiece
+        return boardcpy
+    }
 }

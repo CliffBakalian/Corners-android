@@ -1,12 +1,11 @@
 package com.cyb.corners.computer
-import android.util.Log
 import com.cyb.corners.game.*
 import com.cyb.corners.player.Player
 
 class Checker {
     companion object {
         private fun down(board:Board, lp: Int, piece: Int):Boolean{
-            val rowStart = lp+board.size;
+            val rowStart = lp+board.size
             val rowEnd = board.size*board.size
             for(i in rowStart until rowEnd step board.size){
                 if(i == piece)
@@ -31,7 +30,7 @@ class Checker {
             return false
         }
         private fun up(board:Board, lp:Int, piece:Int):Boolean{
-            val rowStart = lp%board.size;
+            val rowStart = lp%board.size
             for(i in rowStart until lp step board.size){
                 if(i == piece)
                     return true
@@ -43,8 +42,6 @@ class Checker {
             val location = piece.row*board.size + piece.col
             val lpLocation = board.lastPiece.row*board.size + board.lastPiece.col
             if(piece.orientation == 5) return false
-            Log.i("Orientatin: ",""+piece.orientation)
-            Log.i("location: ",""+location)
             if(piece.orientation == 0 && location == ((board.size*board.size)-1)||
                 piece.orientation == 1 && location == (board.size*(board.size-1))||
                 piece.orientation == 2 && location == 0||
@@ -64,10 +61,17 @@ class Checker {
             return false
         }
 
+        fun isValid(move:Int,orientation:Int, size:Int):Boolean{
+            return (!(orientation == 0 && move == ((size*size)-1)||
+                orientation == 1 && move == (size*(size-1))||
+                orientation == 2 && move == 0||
+                orientation == 3 && move == size-1))
+        }
+
         private fun down(board:Board, lp: Int):IntArray{
-            val rowStart = lp+board.size;
+            val rowStart = lp+board.size
             val rowEnd = board.size*board.size
-            val arr = IntArray(board.size -lp/board.size - 1){_->-1}
+            val arr = IntArray(board.size -lp/board.size - 1){-1}
             for(i in rowStart until rowEnd step board.size){
                 if(board.boolBoard[i])
                     arr[i/board.size-lp/board.size-1] = i
@@ -76,7 +80,7 @@ class Checker {
         }
         private fun right(board:Board, lp:Int):IntArray{
             val colEnd = ((lp/board.size)+1)*board.size
-            val arr = IntArray(colEnd - lp-1){_->-1}
+            val arr = IntArray(colEnd - lp-1){-1}
             for(i in lp+1 until colEnd){
                 if(board.boolBoard[i])
                     arr[i-lp-1]=i
@@ -85,7 +89,7 @@ class Checker {
         }
         private fun left(board:Board, lp:Int):IntArray{
             val colStart = lp-(lp%board.size)
-            val arr = IntArray(lp-colStart){_->-1}
+            val arr = IntArray(lp-colStart){-1}
             for(i in colStart until lp){
                 if(board.boolBoard[i])
                     arr[i%board.size]=i
@@ -93,8 +97,8 @@ class Checker {
             return arr
         }
         private fun up(board:Board, lp:Int):IntArray{
-            val rowStart = lp%board.size;
-            val arr = IntArray((lp-rowStart)/board.size){_->-1}
+            val rowStart = lp%board.size
+            val arr = IntArray((lp-rowStart)/board.size){-1}
             for(i in rowStart until lp step board.size){
                 if(board.boolBoard[i])
                     arr[i/board.size] = i
@@ -117,9 +121,9 @@ class Checker {
                 if (i != -1)
                     count++
             }
-            val temp = IntArray(count){_->-1}
+            val temp = IntArray(count){-1}
             count = 0
-            for ((index, value) in possible.withIndex()){
+            for (value in possible){
                 if(value != -1){
                     temp[count] = value
                     count++
@@ -128,22 +132,22 @@ class Checker {
             possible = temp
             if (possible contentEquals intArrayOf(0)){
                 if(player.pieces contentEquals booleanArrayOf(true, false, false, false))
-                    possible = IntArray(0){_->-1}
+                    possible = IntArray(0){-1}
             }else if(possible contentEquals intArrayOf(board.size)){
                 if(player.pieces contentEquals booleanArrayOf(false, true, false, false))
-                    possible = IntArray(0){_->-1}
+                    possible = IntArray(0){-1}
             }else if(possible contentEquals intArrayOf(board.size*(board.size-1))) {
                 if(player.pieces contentEquals booleanArrayOf(false, false, true, false))
-                    possible = IntArray(0){_->-1}
+                    possible = IntArray(0){-1}
             }else if(possible contentEquals intArrayOf(board.size*board.size-1)) {
                 if(player.pieces contentEquals booleanArrayOf(false, false, false, true))
-                    possible = IntArray(0){_->-1}
+                    possible = IntArray(0){-1}
             }
             return possible
         }
-        fun isDone(board: Board, player: Player):Boolean{
-            return getMoves(board,player).isEmpty()
-
-        }
+//        fun isDone(board: Board, player: Player):Boolean{
+//            return getMoves(board,player).isEmpty()
+//
+//        }
     }
 }

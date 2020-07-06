@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".GameActivity">
 
     <TableLayout
@@ -30,11 +31,11 @@
                 android:layout_width="fill_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="0"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell0"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="0" />
 
             <ImageButton
                 android:id="@+id/button1"
@@ -43,11 +44,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="1"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell1"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="1" />
 
             <ImageButton
                 android:id="@+id/button2"
@@ -56,11 +57,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="2"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell2"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="2" />
 
             <ImageButton
                 android:id="@+id/button3"
@@ -69,11 +70,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="3"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell3"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="3" />
 
             <ImageButton
                 android:id="@+id/button4"
@@ -82,11 +83,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="4"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell4"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="4" />
         </TableRow>
 
         <TableRow
@@ -101,11 +102,11 @@
                 android:layout_width="fill_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="5"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell5"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="5" />
 
             <ImageButton
                 android:id="@+id/button6"
@@ -114,11 +115,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="6"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell6"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="6" />
 
             <ImageButton
                 android:id="@+id/button7"
@@ -127,11 +128,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="7"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell7"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="7" />
 
             <ImageButton
                 android:id="@+id/button8"
@@ -140,11 +141,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="8"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell8"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="8" />
 
             <ImageButton
                 android:id="@+id/button9"
@@ -153,11 +154,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="9"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell9"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="9" />
         </TableRow>
 
         <TableRow
@@ -172,11 +173,11 @@
                 android:layout_width="fill_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="10"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell10"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="10" />
 
             <ImageButton
                 android:id="@+id/button11"
@@ -185,11 +186,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="11"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell11"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="11" />
 
             <ImageButton
                 android:id="@+id/button12"
@@ -198,11 +199,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="12"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell12"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="12" />
 
             <ImageButton
                 android:id="@+id/button13"
@@ -211,11 +212,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="13"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell13"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="13" />
 
             <ImageButton
                 android:id="@+id/button14"
@@ -224,11 +225,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="14"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell14"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="14" />
         </TableRow>
 
         <TableRow
@@ -243,11 +244,11 @@
                 android:layout_width="fill_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="15"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell15"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="15" />
 
             <ImageButton
                 android:id="@+id/button16"
@@ -256,11 +257,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="16"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell16"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="16" />
 
             <ImageButton
                 android:id="@+id/button17"
@@ -269,11 +270,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="17"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell17"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="17" />
 
             <ImageButton
                 android:id="@+id/button18"
@@ -282,11 +283,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="18"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell18"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="18" />
 
             <ImageButton
                 android:id="@+id/button19"
@@ -295,11 +296,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="19"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell19"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="19" />
         </TableRow>
 
         <TableRow
@@ -314,11 +315,11 @@
                 android:layout_width="fill_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="20"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell20"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="20" />
 
             <ImageButton
                 android:id="@+id/button21"
@@ -327,11 +328,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="21"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell21"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="21" />
 
             <ImageButton
                 android:id="@+id/button22"
@@ -340,11 +341,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="22"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell22"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="22" />
 
             <ImageButton
                 android:id="@+id/button23"
@@ -353,11 +354,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="23"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell23"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="23" />
 
             <ImageButton
                 android:id="@+id/button24"
@@ -366,11 +367,11 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:background="#FFFFFF"
-                android:tag="24"
-                android:onClick="makeMove"
                 android:contentDescription="@+string/boardCell24"
                 android:minWidth="56dp"
-                android:minHeight="56dp" />
+                android:minHeight="56dp"
+                android:onClick="makeMove"
+                android:tag="24" />
         </TableRow>
     </TableLayout>
 
@@ -407,8 +408,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:src="@drawable/ic_piece"
-            android:contentDescription="@+string/playerPiece0" />
+            android:contentDescription="@+string/playerPiece0"
+            android:src="@drawable/ic_piece" />
 
         <ImageView
             android:id="@+id/piece1"
@@ -416,8 +417,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:contentDescription="@+string/playerPiece1"
-            android:src="@drawable/ic_piece"
-            android:rotation="90"/>
+            android:rotation="90"
+            android:src="@drawable/ic_piece" />
 
     </LinearLayout>
 
@@ -425,10 +426,10 @@
         android:id="@+id/pieces2"
         android:layout_width="128dp"
         android:layout_height="0dp"
-        android:orientation="horizontal"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pieces">
